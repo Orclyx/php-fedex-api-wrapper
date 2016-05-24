@@ -1,5 +1,5 @@
 <?php
-namespace FedEx\Pickup\ComplexType;
+namespace FedEx\PickupService\ComplexType;
 
 use FedEx\AbstractComplexType;
 
@@ -24,7 +24,7 @@ class FreightGuaranteeDetail
     /**
      * Description of Guarantee
      *
-     * @param \FedEx\Pickup\SimpleType\FreightGuaranteeType|string $type
+     * @param \FedEx\PickupService\SimpleType\FreightGuaranteeType|string $type
      * return FreightGuaranteeDetail
      */
     public function setType($type)

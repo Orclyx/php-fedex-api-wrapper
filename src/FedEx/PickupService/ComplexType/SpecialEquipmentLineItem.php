@@ -1,5 +1,5 @@
 <?php
-namespace FedEx\Pickup\ComplexType;
+namespace FedEx\PickupService\ComplexType;
 
 use FedEx\AbstractComplexType;
 
@@ -24,7 +24,7 @@ class SpecialEquipmentLineItem
     /**
      * Type of equipment used
      *
-     * @param \FedEx\Pickup\SimpleType\SpecialEquipmentType|string $type
+     * @param \FedEx\PickupService\SimpleType\SpecialEquipmentType|string $type
      * return SpecialEquipmentLineItem
      */
     public function setType($type)

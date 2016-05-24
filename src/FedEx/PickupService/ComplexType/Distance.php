@@ -1,5 +1,5 @@
 <?php
-namespace FedEx\Pickup\ComplexType;
+namespace FedEx\PickupService\ComplexType;
 
 use FedEx\AbstractComplexType;
 
@@ -36,7 +36,7 @@ class Distance
     /**
      * Identifies the unit of measure for the distance value.
      *
-     * @param \FedEx\Pickup\SimpleType\DistanceUnits|string $units
+     * @param \FedEx\PickupService\SimpleType\DistanceUnits|string $units
      * return Distance
      */
     public function setUnits($units)

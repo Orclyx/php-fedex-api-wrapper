@@ -1,5 +1,5 @@
 <?php
-namespace FedEx\Pickup\ComplexType;
+namespace FedEx\PickupService\ComplexType;
 
 use FedEx\AbstractComplexType;
 
@@ -84,7 +84,7 @@ class CompletedFreightPickupDetail
     /**
      * Resulting status of pickup.
      *
-     * @param \FedEx\Pickup\SimpleType\PickupEventType|string $status
+     * @param \FedEx\PickupService\SimpleType\PickupEventType|string $status
      * return CompletedFreightPickupDetail
      */
     public function setStatus($status)

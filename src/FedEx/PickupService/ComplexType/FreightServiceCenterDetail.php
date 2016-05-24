@@ -1,5 +1,5 @@
 <?php
-namespace FedEx\Pickup\ComplexType;
+namespace FedEx\PickupService\ComplexType;
 
 use FedEx\AbstractComplexType;
 
@@ -60,7 +60,7 @@ class FreightServiceCenterDetail
     /**
      * Service branding which may be used for local pickup or delivery, distinct from service used for line-haul of customer's shipment.
      *
-     * @param \FedEx\Pickup\SimpleType\ServiceType|string $localService
+     * @param \FedEx\PickupService\SimpleType\ServiceType|string $localService
      * return FreightServiceCenterDetail
      */
     public function setLocalService($localService)
@@ -96,7 +96,7 @@ class FreightServiceCenterDetail
     /**
      * Specifies when/how the customer can arrange for pickup or delivery.
      *
-     * @param \FedEx\Pickup\SimpleType\FreightServiceSchedulingType|string $localServiceScheduling
+     * @param \FedEx\PickupService\SimpleType\FreightServiceSchedulingType|string $localServiceScheduling
      * return FreightServiceCenterDetail
      */
     public function setLocalServiceScheduling($localServiceScheduling)

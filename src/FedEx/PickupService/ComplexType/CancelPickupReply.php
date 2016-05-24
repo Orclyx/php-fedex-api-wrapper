@@ -1,5 +1,5 @@
 <?php
-namespace FedEx\Pickup\ComplexType;
+namespace FedEx\PickupService\ComplexType;
 
 use FedEx\AbstractComplexType;
 
@@ -24,7 +24,7 @@ class CancelPickupReply
     /**
      * Identifies the highest severity encountered when executing the request; in order from high to low: FAILURE, ERROR, WARNING, NOTE, SUCCESS.
      *
-     * @param \FedEx\Pickup\SimpleType\NotificationSeverityType|string $highestSeverity
+     * @param \FedEx\PickupService\SimpleType\NotificationSeverityType|string $highestSeverity
      * return CancelPickupReply
      */
     public function setHighestSeverity($highestSeverity)

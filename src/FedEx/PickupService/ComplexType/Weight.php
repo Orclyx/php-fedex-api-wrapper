@@ -1,5 +1,5 @@
 <?php
-namespace FedEx\Pickup\ComplexType;
+namespace FedEx\PickupService\ComplexType;
 
 use FedEx\AbstractComplexType;
 
@@ -24,7 +24,7 @@ class Weight
     /**
      * Identifies the unit of measure associated with a weight value.
      *
-     * @param \FedEx\Pickup\SimpleType\WeightUnits|string $units
+     * @param \FedEx\PickupService\SimpleType\WeightUnits|string $units
      * return Weight
      */
     public function setUnits($units)

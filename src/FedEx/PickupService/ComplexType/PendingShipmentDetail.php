@@ -1,5 +1,5 @@
 <?php
-namespace FedEx\Pickup\ComplexType;
+namespace FedEx\PickupService\ComplexType;
 
 use FedEx\AbstractComplexType;
 
@@ -24,7 +24,7 @@ class PendingShipmentDetail
     /**
      * Identifies the type of FedEx pending shipment
      *
-     * @param \FedEx\Pickup\SimpleType\PendingShipmentType|string $type
+     * @param \FedEx\PickupService\SimpleType\PendingShipmentType|string $type
      * return PendingShipmentDetail
      */
     public function setType($type)

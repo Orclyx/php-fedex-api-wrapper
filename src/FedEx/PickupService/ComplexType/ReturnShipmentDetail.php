@@ -1,5 +1,5 @@
 <?php
-namespace FedEx\Pickup\ComplexType;
+namespace FedEx\PickupService\ComplexType;
 
 use FedEx\AbstractComplexType;
 
@@ -24,7 +24,7 @@ class ReturnShipmentDetail
     /**
      * The type of return shipment that is being requested.
      *
-     * @param \FedEx\Pickup\SimpleType\ReturnType|string $returnType
+     * @param \FedEx\PickupService\SimpleType\ReturnType|string $returnType
      * return ReturnShipmentDetail
      */
     public function setReturnType($returnType)

@@ -1,5 +1,5 @@
 <?php
-namespace FedEx\Pickup\ComplexType;
+namespace FedEx\PickupService\ComplexType;
 
 use FedEx\AbstractComplexType;
 
@@ -72,7 +72,7 @@ class ClientDetail
     /**
      * Indicates the region from which the transaction is submitted.
      *
-     * @param \FedEx\Pickup\SimpleType\ExpressRegionCode|string $region
+     * @param \FedEx\PickupService\SimpleType\ExpressRegionCode|string $region
      * return ClientDetail
      */
     public function setRegion($region)

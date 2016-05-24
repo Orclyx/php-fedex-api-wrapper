@@ -1,5 +1,5 @@
 <?php
-namespace FedEx\Pickup\ComplexType;
+namespace FedEx\PickupService\ComplexType;
 
 use FedEx\AbstractComplexType;
 
@@ -24,7 +24,7 @@ class InternationalControlledExportDetail
     /**
      * Set Type
      *
-     * @param \FedEx\Pickup\SimpleType\InternationalControlledExportType|string $type
+     * @param \FedEx\PickupService\SimpleType\InternationalControlledExportType|string $type
      * return InternationalControlledExportDetail
      */
     public function setType($type)

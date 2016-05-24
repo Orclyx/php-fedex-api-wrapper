@@ -1,5 +1,5 @@
 <?php
-namespace FedEx\Pickup\ComplexType;
+namespace FedEx\PickupService\ComplexType;
 
 use FedEx\AbstractComplexType;
 
@@ -27,7 +27,7 @@ class PickupScheduleOption
     /**
      * the carrier to which this PickupScheduleOption applies
      *
-     * @param \FedEx\Pickup\SimpleType\CarrierCodeType|string $carrier
+     * @param \FedEx\PickupService\SimpleType\CarrierCodeType|string $carrier
      * return PickupScheduleOption
      */
     public function setCarrier($carrier)
@@ -51,7 +51,7 @@ class PickupScheduleOption
     /**
      * Tells whether this option describes a dispatch created on the dispatch date (SAME_DAY), or on a prior date (FUTURE_DAY)
      *
-     * @param \FedEx\Pickup\SimpleType\PickupRequestType|string $scheduleDay
+     * @param \FedEx\PickupService\SimpleType\PickupRequestType|string $scheduleDay
      * return PickupScheduleOption
      */
     public function setScheduleDay($scheduleDay)
@@ -123,7 +123,7 @@ class PickupScheduleOption
     /**
      * Describes the country relationship (domestic and/or international) among the shipments being picked up.
      *
-     * @param \FedEx\Pickup\SimpleType\CountryRelationshipType|string $countryRelationship
+     * @param \FedEx\PickupService\SimpleType\CountryRelationshipType|string $countryRelationship
      * return PickupScheduleOption
      */
     public function setCountryRelationship($countryRelationship)

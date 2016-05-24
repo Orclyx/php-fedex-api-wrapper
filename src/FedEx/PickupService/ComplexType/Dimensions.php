@@ -1,5 +1,5 @@
 <?php
-namespace FedEx\Pickup\ComplexType;
+namespace FedEx\PickupService\ComplexType;
 
 use FedEx\AbstractComplexType;
 
@@ -60,7 +60,7 @@ class Dimensions
     /**
      * Identifies the unit of measure associated with a dimensional values. See LinearUnits for valid values.
      *
-     * @param \FedEx\Pickup\SimpleType\LinearUnits|string $units
+     * @param \FedEx\PickupService\SimpleType\LinearUnits|string $units
      * return Dimensions
      */
     public function setUnits($units)

@@ -1,5 +1,5 @@
 <?php
-namespace FedEx\Pickup\ComplexType;
+namespace FedEx\PickupService\ComplexType;
 
 use FedEx\AbstractComplexType;
 
@@ -36,7 +36,7 @@ class CreditCardTransactionDetail
     /**
      * Set AuthorizationType
      *
-     * @param \FedEx\Pickup\SimpleType\CreditCardAuthorizationType|string $authorizationType
+     * @param \FedEx\PickupService\SimpleType\CreditCardAuthorizationType|string $authorizationType
      * return CreditCardTransactionDetail
      */
     public function setAuthorizationType($authorizationType)

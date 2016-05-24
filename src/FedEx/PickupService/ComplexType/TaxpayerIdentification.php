@@ -1,5 +1,5 @@
 <?php
-namespace FedEx\Pickup\ComplexType;
+namespace FedEx\PickupService\ComplexType;
 
 use FedEx\AbstractComplexType;
 
@@ -24,7 +24,7 @@ class TaxpayerIdentification
     /**
      * Identifies the category of the taxpayer identification number. See TinType for the list of values.
      *
-     * @param \FedEx\Pickup\SimpleType\TinType|string $tinType
+     * @param \FedEx\PickupService\SimpleType\TinType|string $tinType
      * return TaxpayerIdentification
      */
     public function setTinType($tinType)

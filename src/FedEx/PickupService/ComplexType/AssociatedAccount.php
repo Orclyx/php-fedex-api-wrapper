@@ -1,5 +1,5 @@
 <?php
-namespace FedEx\Pickup\ComplexType;
+namespace FedEx\PickupService\ComplexType;
 
 use FedEx\AbstractComplexType;
 
@@ -24,7 +24,7 @@ class AssociatedAccount
     /**
      * Set Type
      *
-     * @param \FedEx\Pickup\SimpleType\AssociatedAccountNumberType|string $type
+     * @param \FedEx\PickupService\SimpleType\AssociatedAccountNumberType|string $type
      * return AssociatedAccount
      */
     public function setType($type)

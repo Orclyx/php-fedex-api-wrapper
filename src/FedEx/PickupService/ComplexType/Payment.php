@@ -1,5 +1,5 @@
 <?php
-namespace FedEx\Pickup\ComplexType;
+namespace FedEx\PickupService\ComplexType;
 
 use FedEx\AbstractComplexType;
 
@@ -24,7 +24,7 @@ class Payment
     /**
      * Identifies the method of payment for a service. See PaymentType for list of valid enumerated values.
      *
-     * @param \FedEx\Pickup\SimpleType\PaymentType|string $paymentType
+     * @param \FedEx\PickupService\SimpleType\PaymentType|string $paymentType
      * return Payment
      */
     public function setPaymentType($paymentType)

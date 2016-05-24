@@ -1,5 +1,5 @@
 <?php
-namespace FedEx\Pickup\ComplexType;
+namespace FedEx\PickupService\ComplexType;
 
 use FedEx\AbstractComplexType;
 
@@ -24,7 +24,7 @@ class FreightPickupLineItem
     /**
      * Set Service
      *
-     * @param \FedEx\Pickup\SimpleType\ServiceType|string $service
+     * @param \FedEx\PickupService\SimpleType\ServiceType|string $service
      * return FreightPickupLineItem
      */
     public function setService($service)
@@ -60,7 +60,7 @@ class FreightPickupLineItem
     /**
      * Identifies the physical packaging of the shipment.
      *
-     * @param \FedEx\Pickup\SimpleType\PhysicalPackagingType|string $packaging
+     * @param \FedEx\PickupService\SimpleType\PhysicalPackagingType|string $packaging
      * return FreightPickupLineItem
      */
     public function setPackaging($packaging)

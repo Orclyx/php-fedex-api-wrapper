@@ -1,5 +1,5 @@
 <?php
-namespace FedEx\Pickup\ComplexType;
+namespace FedEx\PickupService\ComplexType;
 
 use FedEx\AbstractComplexType;
 
@@ -24,7 +24,7 @@ class EMailNotificationDetail
     /**
      * Specifies whether/how email notifications are grouped.
      *
-     * @param \FedEx\Pickup\SimpleType\EMailNotificationAggregationType|string $aggregationType
+     * @param \FedEx\PickupService\SimpleType\EMailNotificationAggregationType|string $aggregationType
      * return EMailNotificationDetail
      */
     public function setAggregationType($aggregationType)

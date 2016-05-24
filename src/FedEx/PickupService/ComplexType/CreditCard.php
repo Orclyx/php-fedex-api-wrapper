@@ -1,5 +1,5 @@
 <?php
-namespace FedEx\Pickup\ComplexType;
+namespace FedEx\PickupService\ComplexType;
 
 use FedEx\AbstractComplexType;
 
@@ -36,7 +36,7 @@ class CreditCard
     /**
      * Set CreditCardType
      *
-     * @param \FedEx\Pickup\SimpleType\CreditCardType|string $creditCardType
+     * @param \FedEx\PickupService\SimpleType\CreditCardType|string $creditCardType
      * return CreditCard
      */
     public function setCreditCardType($creditCardType)

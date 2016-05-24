@@ -1,5 +1,5 @@
 <?php
-namespace FedEx\Pickup\ComplexType;
+namespace FedEx\PickupService\ComplexType;
 
 use FedEx\AbstractComplexType;
 
@@ -24,7 +24,7 @@ class CustomDeliveryWindowDetail
     /**
      * Indicates the type of custom delivery being requested.
      *
-     * @param \FedEx\Pickup\SimpleType\CustomDeliveryWindowType|string $type
+     * @param \FedEx\PickupService\SimpleType\CustomDeliveryWindowType|string $type
      * return CustomDeliveryWindowDetail
      */
     public function setType($type)

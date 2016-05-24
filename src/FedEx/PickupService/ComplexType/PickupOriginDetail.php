@@ -1,5 +1,5 @@
 <?php
-namespace FedEx\Pickup\ComplexType;
+namespace FedEx\PickupService\ComplexType;
 
 use FedEx\AbstractComplexType;
 
@@ -60,7 +60,7 @@ class PickupOriginDetail
     /**
      * Identifies the physical location where the courier should pick up the shipment. See CourierDispatchBuildingLocationType for valid values.
      *
-     * @param \FedEx\Pickup\SimpleType\PickupBuildingLocationType|string $packageLocation
+     * @param \FedEx\PickupService\SimpleType\PickupBuildingLocationType|string $packageLocation
      * return PickupOriginDetail
      */
     public function setPackageLocation($packageLocation)
@@ -72,7 +72,7 @@ class PickupOriginDetail
     /**
      * Set BuildingPart
      *
-     * @param \FedEx\Pickup\SimpleType\BuildingPartCode|string $buildingPart
+     * @param \FedEx\PickupService\SimpleType\BuildingPartCode|string $buildingPart
      * return PickupOriginDetail
      */
     public function setBuildingPart($buildingPart)
@@ -132,7 +132,7 @@ class PickupOriginDetail
     /**
      * FedEx USE ONLY (with IVR client)
      *
-     * @param \FedEx\Pickup\SimpleType\PickupRequestType|string $pickupDateType
+     * @param \FedEx\PickupService\SimpleType\PickupRequestType|string $pickupDateType
      * return PickupOriginDetail
      */
     public function setPickupDateType($pickupDateType)

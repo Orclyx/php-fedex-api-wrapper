@@ -1,5 +1,5 @@
 <?php
-namespace FedEx\Pickup\ComplexType;
+namespace FedEx\PickupService\ComplexType;
 
 use FedEx\AbstractComplexType;
 
@@ -24,7 +24,7 @@ class CodAddTransportationChargesDetail
     /**
      * Set RateTypeBasis
      *
-     * @param \FedEx\Pickup\SimpleType\RateTypeBasisType|string $rateTypeBasis
+     * @param \FedEx\PickupService\SimpleType\RateTypeBasisType|string $rateTypeBasis
      * return CodAddTransportationChargesDetail
      */
     public function setRateTypeBasis($rateTypeBasis)
@@ -36,7 +36,7 @@ class CodAddTransportationChargesDetail
     /**
      * Set ChargeBasis
      *
-     * @param \FedEx\Pickup\SimpleType\CodAddTransportationChargeBasisType|string $chargeBasis
+     * @param \FedEx\PickupService\SimpleType\CodAddTransportationChargeBasisType|string $chargeBasis
      * return CodAddTransportationChargesDetail
      */
     public function setChargeBasis($chargeBasis)
@@ -48,7 +48,7 @@ class CodAddTransportationChargesDetail
     /**
      * Set ChargeBasisLevel
      *
-     * @param \FedEx\Pickup\SimpleType\ChargeBasisLevelType|string $chargeBasisLevel
+     * @param \FedEx\PickupService\SimpleType\ChargeBasisLevelType|string $chargeBasisLevel
      * return CodAddTransportationChargesDetail
      */
     public function setChargeBasisLevel($chargeBasisLevel)

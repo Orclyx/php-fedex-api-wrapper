@@ -1,5 +1,5 @@
 <?php
-namespace FedEx\Pickup\ComplexType;
+namespace FedEx\PickupService\ComplexType;
 
 use FedEx\AbstractComplexType;
 
@@ -24,7 +24,7 @@ class ExpressFreightPickupDetail
     /**
      * Identifies the collection of available FedEx transportation service options. Must be a valid FedEx freight service identifier.
      *
-     * @param \FedEx\Pickup\SimpleType\ServiceType|string $service
+     * @param \FedEx\PickupService\SimpleType\ServiceType|string $service
      * return ExpressFreightPickupDetail
      */
     public function setService($service)
@@ -60,7 +60,7 @@ class ExpressFreightPickupDetail
     /**
      * Identifies the type of truck that is needed for FedEx to pick up the freight shipment. See TruckType for valid values.
      *
-     * @param \FedEx\Pickup\SimpleType\TruckType|string $truckType
+     * @param \FedEx\PickupService\SimpleType\TruckType|string $truckType
      * return ExpressFreightPickupDetail
      */
     public function setTruckType($truckType)
@@ -72,7 +72,7 @@ class ExpressFreightPickupDetail
     /**
      * Identifies the tailer size needed for FedEx to pick up a freight shipment. See TrailerSizeType for valid values.
      *
-     * @param \FedEx\Pickup\SimpleType\TrailerSizeType|string $trailerSize
+     * @param \FedEx\PickupService\SimpleType\TrailerSizeType|string $trailerSize
      * return ExpressFreightPickupDetail
      */
     public function setTrailerSize($trailerSize)

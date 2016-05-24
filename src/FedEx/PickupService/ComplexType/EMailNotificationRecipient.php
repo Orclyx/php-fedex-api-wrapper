@@ -1,5 +1,5 @@
 <?php
-namespace FedEx\Pickup\ComplexType;
+namespace FedEx\PickupService\ComplexType;
 
 use FedEx\AbstractComplexType;
 
@@ -24,7 +24,7 @@ class EMailNotificationRecipient
     /**
      * Identifies the relationship this email recipient has to the shipment.
      *
-     * @param \FedEx\Pickup\SimpleType\EMailNotificationRecipientType|string $eMailNotificationRecipientType
+     * @param \FedEx\PickupService\SimpleType\EMailNotificationRecipientType|string $eMailNotificationRecipientType
      * return EMailNotificationRecipient
      */
     public function setEMailNotificationRecipientType($eMailNotificationRecipientType)
@@ -60,7 +60,7 @@ class EMailNotificationRecipient
     /**
      * The format of the email notification.
      *
-     * @param \FedEx\Pickup\SimpleType\EMailNotificationFormatType|string $format
+     * @param \FedEx\PickupService\SimpleType\EMailNotificationFormatType|string $format
      * return EMailNotificationRecipient
      */
     public function setFormat($format)

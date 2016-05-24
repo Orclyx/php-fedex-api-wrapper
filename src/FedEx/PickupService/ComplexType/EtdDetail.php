@@ -1,5 +1,5 @@
 <?php
-namespace FedEx\Pickup\ComplexType;
+namespace FedEx\PickupService\ComplexType;
 
 use FedEx\AbstractComplexType;
 
@@ -24,7 +24,7 @@ class EtdDetail
     /**
      * Specifies client's intent for whether all documents must be confirmed before shipment processing.
      *
-     * @param \FedEx\Pickup\SimpleType\EtdConfirmationType|string $confirmation
+     * @param \FedEx\PickupService\SimpleType\EtdConfirmationType|string $confirmation
      * return EtdDetail
      */
     public function setConfirmation($confirmation)

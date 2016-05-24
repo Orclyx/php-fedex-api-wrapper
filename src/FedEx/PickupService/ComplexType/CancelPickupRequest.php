@@ -1,5 +1,5 @@
 <?php
-namespace FedEx\Pickup\ComplexType;
+namespace FedEx\PickupService\ComplexType;
 
 use FedEx\AbstractComplexType;
 
@@ -72,7 +72,7 @@ class CancelPickupRequest
     /**
      * Identifies the FedEx operating company (transportation) that was sent the pickup that is being canceled.
      *
-     * @param \FedEx\Pickup\SimpleType\CarrierCodeType|string $carrierCode
+     * @param \FedEx\PickupService\SimpleType\CarrierCodeType|string $carrierCode
      * return CancelPickupRequest
      */
     public function setCarrierCode($carrierCode)

@@ -1,5 +1,5 @@
 <?php
-namespace FedEx\Pickup\ComplexType;
+namespace FedEx\PickupService\ComplexType;
 
 use FedEx\AbstractComplexType;
 
@@ -48,7 +48,7 @@ class HoldAtLocationDetail
     /**
      * Type of facility at which package/shipment is to be held.
      *
-     * @param \FedEx\Pickup\SimpleType\FedExLocationType|string $locationType
+     * @param \FedEx\PickupService\SimpleType\FedExLocationType|string $locationType
      * return HoldAtLocationDetail
      */
     public function setLocationType($locationType)

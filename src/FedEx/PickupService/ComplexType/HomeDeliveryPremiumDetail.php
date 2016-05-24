@@ -1,5 +1,5 @@
 <?php
-namespace FedEx\Pickup\ComplexType;
+namespace FedEx\PickupService\ComplexType;
 
 use FedEx\AbstractComplexType;
 
@@ -24,7 +24,7 @@ class HomeDeliveryPremiumDetail
     /**
      * The type of Home Delivery Premium service being requested.
      *
-     * @param \FedEx\Pickup\SimpleType\HomeDeliveryPremiumType|string $homeDeliveryPremiumType
+     * @param \FedEx\PickupService\SimpleType\HomeDeliveryPremiumType|string $homeDeliveryPremiumType
      * return HomeDeliveryPremiumDetail
      */
     public function setHomeDeliveryPremiumType($homeDeliveryPremiumType)

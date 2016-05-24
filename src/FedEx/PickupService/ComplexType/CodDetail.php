@@ -1,5 +1,5 @@
 <?php
-namespace FedEx\Pickup\ComplexType;
+namespace FedEx\PickupService\ComplexType;
 
 use FedEx\AbstractComplexType;
 
@@ -48,7 +48,7 @@ class CodDetail
     /**
      * Identifies the type of funds FedEx should collect upon package delivery
      *
-     * @param \FedEx\Pickup\SimpleType\CodCollectionType|string $collectionType
+     * @param \FedEx\PickupService\SimpleType\CodCollectionType|string $collectionType
      * return CodDetail
      */
     public function setCollectionType($collectionType)
@@ -72,7 +72,7 @@ class CodDetail
     /**
      * Indicates which type of reference information to include on the COD return shipping label.
      *
-     * @param \FedEx\Pickup\SimpleType\CodReturnReferenceIndicatorType|string $referenceIndicator
+     * @param \FedEx\PickupService\SimpleType\CodReturnReferenceIndicatorType|string $referenceIndicator
      * return CodDetail
      */
     public function setReferenceIndicator($referenceIndicator)

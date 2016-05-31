@@ -66,13 +66,13 @@ class GenerateSimpleTypeClasses extends AbstractGenerate
         if (file_exists($wsdlPath)) {
             $this->_wsdlPath = $wsdlPath;
         } else {
-            throw new Exception('path to wsdl file is invalid');
+            throw new \Exception('path to wsdl file is invalid');
         }
 
         if (is_writable($exportPath)){
             $this->_exportPath = $exportPath;
         } else {
-            throw new Exception('cannot write to export path');
+            throw new \Exception('cannot write to export path');
         }
 
         $this->_namespace = $namespace;

@@ -25,7 +25,7 @@ class CompletedHazardousShipmentDetail
      * Set HazardousSummaryDetail
      *
      * @param CompletedHazardousSummaryDetail $hazardousSummaryDetail
-     * return CompletedHazardousShipmentDetail
+     * @return CompletedHazardousShipmentDetail
      */
     public function setHazardousSummaryDetail(CompletedHazardousSummaryDetail $hazardousSummaryDetail)
     {
@@ -34,15 +34,57 @@ class CompletedHazardousShipmentDetail
     }
     
     /**
+     * Returns Set HazardousSummaryDetail
+     *
+     * @return CompletedHazardousSummaryDetail
+     */
+    public function getHazardousSummaryDetail()
+    {
+        return $this->HazardousSummaryDetail;
+    }
+    
+    /**
      * Set DryIceDetail
      *
      * @param ShipmentDryIceDetail $dryIceDetail
-     * return CompletedHazardousShipmentDetail
+     * @return CompletedHazardousShipmentDetail
      */
     public function setDryIceDetail(ShipmentDryIceDetail $dryIceDetail)
     {
         $this->DryIceDetail = $dryIceDetail;
         return $this;
+    }
+    
+    /**
+     * Returns Set DryIceDetail
+     *
+     * @return ShipmentDryIceDetail
+     */
+    public function getDryIceDetail()
+    {
+        return $this->DryIceDetail;
+    }
+    
+    /**
+     * This contains the ADR License information, which identifies the license number and ADR category under which the customer is allowed to ship.
+     *
+     * @param AdrLicenseDetail $adrLicense
+     * @return CompletedHazardousShipmentDetail
+     */
+    public function setAdrLicense(AdrLicenseDetail $adrLicense)
+    {
+        $this->AdrLicense = $adrLicense;
+        return $this;
+    }
+    
+    /**
+     * Returns This contains the ADR License information, which identifies the license number and ADR category under which the customer is allowed to ship.
+     *
+     * @return AdrLicenseDetail
+     */
+    public function getAdrLicense()
+    {
+        return $this->AdrLicense;
     }
     
 

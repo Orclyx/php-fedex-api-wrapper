@@ -8,7 +8,7 @@ use FedEx\AbstractComplexType;
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
- * @subpackage  Package Movement Information Service
+ * @subpackage  Rate Service
  */
 class TrackPackageIdentifier
     extends AbstractComplexType
@@ -22,10 +22,32 @@ class TrackPackageIdentifier
     protected $_name = 'TrackPackageIdentifier';
 
     /**
+     * The type of the Value to be used to retrieve tracking information for a package (e.g. SHIPPER_REFERENCE, PURCHASE_ORDER, TRACKING_NUMBER_OR_DOORTAG, etc..) .
+     *
+     * @param \FedEx\TrackService\SimpleType\TrackIdentifierType|string $type
+     * @return TrackPackageIdentifier
+     */
+    public function setType($type)
+    {
+        $this->Type = $type;
+        return $this;
+    }
+    
+    /**
+     * Returns The type of the Value to be used to retrieve tracking information for a package (e.g. SHIPPER_REFERENCE, PURCHASE_ORDER, TRACKING_NUMBER_OR_DOORTAG, etc..) .
+     *
+     * @return \FedEx\TrackService\SimpleType\TrackIdentifierType|string
+     */
+    public function getType()
+    {
+        return $this->Type;
+    }
+    
+    /**
      * The value to be used to retrieve tracking information for a package.
      *
      * @param string $value
-     * return TrackPackageIdentifier
+     * @return TrackPackageIdentifier
      */
     public function setValue($value)
     {
@@ -34,15 +56,13 @@ class TrackPackageIdentifier
     }
     
     /**
-     * The type of the Value to be used to retrieve tracking information for a package (e.g. SHIPPER_REFERENCE, PURCHASE_ORDER, TRACKING_NUMBER_OR_DOORTAG, etc..) .
+     * Returns The value to be used to retrieve tracking information for a package.
      *
-     * @param \FedEx\TrackService\SimpleType\TrackIdentifierType|string $type
-     * return TrackPackageIdentifier
+     * @return string
      */
-    public function setType($type)
+    public function getValue()
     {
-        $this->Type = $type;
-        return $this;
+        return $this->Value;
     }
     
 

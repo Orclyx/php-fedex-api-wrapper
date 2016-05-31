@@ -13,7 +13,7 @@ use FedEx\AbstractSimpleType;
 class RateRequestType
     extends AbstractSimpleType
 {
-    const _ACCOUNT = 'ACCOUNT';
     const _LIST = 'LIST';
+    const _NONE = 'NONE';
     const _PREFERRED = 'PREFERRED';
 }

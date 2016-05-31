@@ -8,10 +8,11 @@ use FedEx\AbstractSimpleType;
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
- * @subpackage  Package Movement Information Service
+ * @subpackage  Rate Service
  */
 class SignatureProofOfDeliveryImageType
     extends AbstractSimpleType
 {
     const _PDF = 'PDF';
+    const _PNG = 'PNG';
 }

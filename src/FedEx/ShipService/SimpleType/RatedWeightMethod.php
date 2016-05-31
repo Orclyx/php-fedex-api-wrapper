@@ -16,6 +16,7 @@ class RatedWeightMethod
     const _ACTUAL = 'ACTUAL';
     const _AVERAGE_PACKAGE_WEIGHT_MINIMUM = 'AVERAGE_PACKAGE_WEIGHT_MINIMUM';
     const _BALLOON = 'BALLOON';
+    const _DEFAULT_WEIGHT_APPLIED = 'DEFAULT_WEIGHT_APPLIED';
     const _DIM = 'DIM';
     const _FREIGHT_MINIMUM = 'FREIGHT_MINIMUM';
     const _MIXED = 'MIXED';

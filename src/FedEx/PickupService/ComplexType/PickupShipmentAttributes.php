@@ -4,7 +4,7 @@ namespace FedEx\PickupService\ComplexType;
 use FedEx\AbstractComplexType;
 
 /**
- * Descriptive information about the shipment.
+ * PickupShipmentAttributes
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
@@ -25,7 +25,7 @@ class PickupShipmentAttributes
      * Set ServiceType
      *
      * @param \FedEx\PickupService\SimpleType\ServiceType|string $serviceType
-     * return PickupShipmentAttributes
+     * @return PickupShipmentAttributes
      */
     public function setServiceType($serviceType)
     {
@@ -34,10 +34,20 @@ class PickupShipmentAttributes
     }
     
     /**
+     * Returns Set ServiceType
+     *
+     * @return \FedEx\PickupService\SimpleType\ServiceType|string
+     */
+    public function getServiceType()
+    {
+        return $this->ServiceType;
+    }
+    
+    /**
      * Set PackagingType
      *
      * @param \FedEx\PickupService\SimpleType\PackagingType|string $packagingType
-     * return PickupShipmentAttributes
+     * @return PickupShipmentAttributes
      */
     public function setPackagingType($packagingType)
     {
@@ -46,10 +56,20 @@ class PickupShipmentAttributes
     }
     
     /**
-     * Descriptive information about the dimensions of the package.
+     * Returns Set PackagingType
+     *
+     * @return \FedEx\PickupService\SimpleType\PackagingType|string
+     */
+    public function getPackagingType()
+    {
+        return $this->PackagingType;
+    }
+    
+    /**
+     * Set Dimensions
      *
      * @param Dimensions $dimensions
-     * return PickupShipmentAttributes
+     * @return PickupShipmentAttributes
      */
     public function setDimensions(Dimensions $dimensions)
     {
@@ -58,15 +78,35 @@ class PickupShipmentAttributes
     }
     
     /**
-     * Descriptive information about the weight of the package.
+     * Returns Set Dimensions
+     *
+     * @return Dimensions
+     */
+    public function getDimensions()
+    {
+        return $this->Dimensions;
+    }
+    
+    /**
+     * Set Weight
      *
      * @param Weight $weight
-     * return PickupShipmentAttributes
+     * @return PickupShipmentAttributes
      */
     public function setWeight(Weight $weight)
     {
         $this->Weight = $weight;
         return $this;
+    }
+    
+    /**
+     * Returns Set Weight
+     *
+     * @return Weight
+     */
+    public function getWeight()
+    {
+        return $this->Weight;
     }
     
 

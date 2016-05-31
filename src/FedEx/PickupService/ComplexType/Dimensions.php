@@ -4,7 +4,7 @@ namespace FedEx\PickupService\ComplexType;
 use FedEx\AbstractComplexType;
 
 /**
- * Descriptive data detailing the length, width, and height of a package.
+ * Dimensions
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
@@ -22,10 +22,10 @@ class Dimensions
     protected $_name = 'Dimensions';
 
     /**
-     * Identifies the length of the package.
+     * Set Length
      *
      * @param nonNegativeInteger $length
-     * return Dimensions
+     * @return Dimensions
      */
     public function setLength($length)
     {
@@ -34,10 +34,20 @@ class Dimensions
     }
     
     /**
-     * Identifies the width of the package.
+     * Returns Set Length
+     *
+     * @return nonNegativeInteger
+     */
+    public function getLength()
+    {
+        return $this->Length;
+    }
+    
+    /**
+     * Set Width
      *
      * @param nonNegativeInteger $width
-     * return Dimensions
+     * @return Dimensions
      */
     public function setWidth($width)
     {
@@ -46,10 +56,20 @@ class Dimensions
     }
     
     /**
-     * Identifies the height of the package.
+     * Returns Set Width
+     *
+     * @return nonNegativeInteger
+     */
+    public function getWidth()
+    {
+        return $this->Width;
+    }
+    
+    /**
+     * Set Height
      *
      * @param nonNegativeInteger $height
-     * return Dimensions
+     * @return Dimensions
      */
     public function setHeight($height)
     {
@@ -58,15 +78,35 @@ class Dimensions
     }
     
     /**
-     * Identifies the unit of measure associated with a dimensional values. See LinearUnits for valid values.
+     * Returns Set Height
+     *
+     * @return nonNegativeInteger
+     */
+    public function getHeight()
+    {
+        return $this->Height;
+    }
+    
+    /**
+     * Set Units
      *
      * @param \FedEx\PickupService\SimpleType\LinearUnits|string $units
-     * return Dimensions
+     * @return Dimensions
      */
     public function setUnits($units)
     {
         $this->Units = $units;
         return $this;
+    }
+    
+    /**
+     * Returns Set Units
+     *
+     * @return \FedEx\PickupService\SimpleType\LinearUnits|string
+     */
+    public function getUnits()
+    {
+        return $this->Units;
     }
     
 

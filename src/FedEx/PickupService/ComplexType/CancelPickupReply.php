@@ -4,7 +4,7 @@ namespace FedEx\PickupService\ComplexType;
 use FedEx\AbstractComplexType;
 
 /**
- * The descriptive data returned to a client in response to a cancel dispatch request.
+ * CancelPickupReply
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
@@ -22,10 +22,10 @@ class CancelPickupReply
     protected $_name = 'CancelPickupReply';
 
     /**
-     * Identifies the highest severity encountered when executing the request; in order from high to low: FAILURE, ERROR, WARNING, NOTE, SUCCESS.
+     * Set HighestSeverity
      *
      * @param \FedEx\PickupService\SimpleType\NotificationSeverityType|string $highestSeverity
-     * return CancelPickupReply
+     * @return CancelPickupReply
      */
     public function setHighestSeverity($highestSeverity)
     {
@@ -34,10 +34,20 @@ class CancelPickupReply
     }
     
     /**
-     * The descriptive data detailing the status of a sumbitted transaction.
+     * Returns Set HighestSeverity
+     *
+     * @return \FedEx\PickupService\SimpleType\NotificationSeverityType|string
+     */
+    public function getHighestSeverity()
+    {
+        return $this->HighestSeverity;
+    }
+    
+    /**
+     * Set Notifications
      *
      * @param Notification[] $notifications
-     * return CancelPickupReply
+     * @return CancelPickupReply
      */
     public function setNotifications(array $notifications)
     {
@@ -46,10 +56,20 @@ class CancelPickupReply
     }
     
     /**
-     * Descriptive data that governs data payload language/translations. The TransactionDetail from the request is echoed back to the caller in the corresponding reply.
+     * Returns Set Notifications
+     *
+     * @return Notification[]
+     */
+    public function getNotifications()
+    {
+        return $this->Notifications;
+    }
+    
+    /**
+     * Set TransactionDetail
      *
      * @param TransactionDetail $transactionDetail
-     * return CancelPickupReply
+     * @return CancelPickupReply
      */
     public function setTransactionDetail(TransactionDetail $transactionDetail)
     {
@@ -58,10 +78,20 @@ class CancelPickupReply
     }
     
     /**
-     * Identifies the version/level of a service operation expected by a caller (in each request) and performed by the callee (in each reply).
+     * Returns Set TransactionDetail
+     *
+     * @return TransactionDetail
+     */
+    public function getTransactionDetail()
+    {
+        return $this->TransactionDetail;
+    }
+    
+    /**
+     * Set Version
      *
      * @param VersionId $version
-     * return CancelPickupReply
+     * @return CancelPickupReply
      */
     public function setVersion(VersionId $version)
     {
@@ -70,15 +100,35 @@ class CancelPickupReply
     }
     
     /**
+     * Returns Set Version
+     *
+     * @return VersionId
+     */
+    public function getVersion()
+    {
+        return $this->Version;
+    }
+    
+    /**
      * Human readable message from dispatch system.
      *
      * @param string $message
-     * return CancelPickupReply
+     * @return CancelPickupReply
      */
     public function setMessage($message)
     {
         $this->Message = $message;
         return $this;
+    }
+    
+    /**
+     * Returns Human readable message from dispatch system.
+     *
+     * @return string
+     */
+    public function getMessage()
+    {
+        return $this->Message;
     }
     
 

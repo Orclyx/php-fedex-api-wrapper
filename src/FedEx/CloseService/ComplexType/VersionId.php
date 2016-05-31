@@ -22,10 +22,10 @@ class VersionId
     protected $_name = 'VersionId';
 
     /**
-     * Set ServiceId
+     * Identifies a system or sub-system which performs an operation.
      *
      * @param string $serviceId
-     * return VersionId
+     * @return VersionId
      */
     public function setServiceId($serviceId)
     {
@@ -34,10 +34,20 @@ class VersionId
     }
     
     /**
-     * Service business level.
+     * Returns Identifies a system or sub-system which performs an operation.
+     *
+     * @return string
+     */
+    public function getServiceId()
+    {
+        return $this->ServiceId;
+    }
+    
+    /**
+     * Identifies the service business level.
      *
      * @param int $major
-     * return VersionId
+     * @return VersionId
      */
     public function setMajor($major)
     {
@@ -46,10 +56,20 @@ class VersionId
     }
     
     /**
-     * Service interface level.
+     * Returns Identifies the service business level.
+     *
+     * @return int
+     */
+    public function getMajor()
+    {
+        return $this->Major;
+    }
+    
+    /**
+     * Identifies the service interface level.
      *
      * @param int $intermediate
-     * return VersionId
+     * @return VersionId
      */
     public function setIntermediate($intermediate)
     {
@@ -58,15 +78,35 @@ class VersionId
     }
     
     /**
-     * Service code level.
+     * Returns Identifies the service interface level.
+     *
+     * @return int
+     */
+    public function getIntermediate()
+    {
+        return $this->Intermediate;
+    }
+    
+    /**
+     * Identifies the service code level.
      *
      * @param int $minor
-     * return VersionId
+     * @return VersionId
      */
     public function setMinor($minor)
     {
         $this->Minor = $minor;
         return $this;
+    }
+    
+    /**
+     * Returns Identifies the service code level.
+     *
+     * @return int
+     */
+    public function getMinor()
+    {
+        return $this->Minor;
     }
     
 

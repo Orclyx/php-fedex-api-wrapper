@@ -22,51 +22,25 @@ class PendingShipmentAccessDetail
     protected $_name = 'PendingShipmentAccessDetail';
 
     /**
-     * Only for pending shipment type of "EMAIL"
+     * Set AccessorDetails
      *
-     * @param string $emailLabelUrl
-     * return PendingShipmentAccessDetail
+     * @param PendingShipmentAccessorDetail[] $accessorDetails
+     * @return PendingShipmentAccessDetail
      */
-    public function setEmailLabelUrl($emailLabelUrl)
+    public function setAccessorDetails(array $accessorDetails)
     {
-        $this->EmailLabelUrl = $emailLabelUrl;
+        $this->AccessorDetails = $accessorDetails;
         return $this;
     }
     
     /**
-     * Only for pending shipment type of "EMAIL"
+     * Returns Set AccessorDetails
      *
-     * @param string $userId
-     * return PendingShipmentAccessDetail
+     * @return PendingShipmentAccessorDetail[]
      */
-    public function setUserId($userId)
+    public function getAccessorDetails()
     {
-        $this->UserId = $userId;
-        return $this;
-    }
-    
-    /**
-     * Only for pending shipment type of "EMAIL"
-     *
-     * @param string $password
-     * return PendingShipmentAccessDetail
-     */
-    public function setPassword($password)
-    {
-        $this->Password = $password;
-        return $this;
-    }
-    
-    /**
-     * This element is currently not supported and is for the future use.
-     *
-     * @param dateTime $expirationTimestamp
-     * return PendingShipmentAccessDetail
-     */
-    public function setExpirationTimestamp($expirationTimestamp)
-    {
-        $this->ExpirationTimestamp = $expirationTimestamp;
-        return $this;
+        return $this->AccessorDetails;
     }
     
 

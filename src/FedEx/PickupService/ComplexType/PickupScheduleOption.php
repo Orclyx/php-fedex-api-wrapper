@@ -4,10 +4,7 @@ namespace FedEx\PickupService\ComplexType;
 use FedEx\AbstractComplexType;
 
 /**
- * The constraints on the scheduling of a dispatch, where that dispatch would be made by the Carrier, occur on the PickupDate,
-						and would be scheduled (created by means of a CourierDispatchRequest) on a date related to the PickupDate as described
-						by the "ScheduleDay" (SAME_DAY meaning that the creation would occur on the PickupDate, and FUTURE_DAY meaning that the creation
-						would occur on a date prior to the PickupDate).
+ * PickupScheduleOption
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
@@ -25,10 +22,10 @@ class PickupScheduleOption
     protected $_name = 'PickupScheduleOption';
 
     /**
-     * the carrier to which this PickupScheduleOption applies
+     * Set Carrier
      *
      * @param \FedEx\PickupService\SimpleType\CarrierCodeType|string $carrier
-     * return PickupScheduleOption
+     * @return PickupScheduleOption
      */
     public function setCarrier($carrier)
     {
@@ -37,10 +34,20 @@ class PickupScheduleOption
     }
     
     /**
-     * Descriptive information about the shipment.
+     * Returns Set Carrier
+     *
+     * @return \FedEx\PickupService\SimpleType\CarrierCodeType|string
+     */
+    public function getCarrier()
+    {
+        return $this->Carrier;
+    }
+    
+    /**
+     * Set Description
      *
      * @param string $description
-     * return PickupScheduleOption
+     * @return PickupScheduleOption
      */
     public function setDescription($description)
     {
@@ -49,10 +56,20 @@ class PickupScheduleOption
     }
     
     /**
-     * Tells whether this option describes a dispatch created on the dispatch date (SAME_DAY), or on a prior date (FUTURE_DAY)
+     * Returns Set Description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->Description;
+    }
+    
+    /**
+     * Set ScheduleDay
      *
      * @param \FedEx\PickupService\SimpleType\PickupRequestType|string $scheduleDay
-     * return PickupScheduleOption
+     * @return PickupScheduleOption
      */
     public function setScheduleDay($scheduleDay)
     {
@@ -61,10 +78,20 @@ class PickupScheduleOption
     }
     
     /**
-     * True if this pickup option is available.
+     * Returns Set ScheduleDay
+     *
+     * @return \FedEx\PickupService\SimpleType\PickupRequestType|string
+     */
+    public function getScheduleDay()
+    {
+        return $this->ScheduleDay;
+    }
+    
+    /**
+     * Set Available
      *
      * @param boolean $available
-     * return PickupScheduleOption
+     * @return PickupScheduleOption
      */
     public function setAvailable($available)
     {
@@ -73,10 +100,20 @@ class PickupScheduleOption
     }
     
     /**
-     * Identifies the date (in the postal code's time zone) to which this PickupScheduleOption refers.
+     * Returns Set Available
+     *
+     * @return boolean
+     */
+    public function getAvailable()
+    {
+        return $this->Available;
+    }
+    
+    /**
+     * Set PickupDate
      *
      * @param date $pickupDate
-     * return PickupScheduleOption
+     * @return PickupScheduleOption
      */
     public function setPickupDate($pickupDate)
     {
@@ -85,10 +122,20 @@ class PickupScheduleOption
     }
     
     /**
-     * Identifies the latest allowed ready time (in the postal code's time zone) for a postal code. As a local time, it will not include a Time Zone Designator
+     * Returns Set PickupDate
+     *
+     * @return date
+     */
+    public function getPickupDate()
+    {
+        return $this->PickupDate;
+    }
+    
+    /**
+     * Set CutOffTime
      *
      * @param time $cutOffTime
-     * return PickupScheduleOption
+     * @return PickupScheduleOption
      */
     public function setCutOffTime(time $cutOffTime)
     {
@@ -97,10 +144,20 @@ class PickupScheduleOption
     }
     
     /**
-     * Identifies the minimum required length of the window of time between the ReadyTime and the CustomerCloseTime.
+     * Returns Set CutOffTime
+     *
+     * @return time
+     */
+    public function getCutOffTime()
+    {
+        return $this->CutOffTime;
+    }
+    
+    /**
+     * Set AccessTime
      *
      * @param duration $accessTime
-     * return PickupScheduleOption
+     * @return PickupScheduleOption
      */
     public function setAccessTime(duration $accessTime)
     {
@@ -109,10 +166,20 @@ class PickupScheduleOption
     }
     
     /**
+     * Returns Set AccessTime
+     *
+     * @return duration
+     */
+    public function getAccessTime()
+    {
+        return $this->AccessTime;
+    }
+    
+    /**
      * Indicates whether residential pickup is available for the requested postal code.
      *
      * @param boolean $residentialAvailable
-     * return PickupScheduleOption
+     * @return PickupScheduleOption
      */
     public function setResidentialAvailable($residentialAvailable)
     {
@@ -121,15 +188,35 @@ class PickupScheduleOption
     }
     
     /**
+     * Returns Indicates whether residential pickup is available for the requested postal code.
+     *
+     * @return boolean
+     */
+    public function getResidentialAvailable()
+    {
+        return $this->ResidentialAvailable;
+    }
+    
+    /**
      * Describes the country relationship (domestic and/or international) among the shipments being picked up.
      *
      * @param \FedEx\PickupService\SimpleType\CountryRelationshipType|string $countryRelationship
-     * return PickupScheduleOption
+     * @return PickupScheduleOption
      */
     public function setCountryRelationship($countryRelationship)
     {
         $this->CountryRelationship = $countryRelationship;
         return $this;
+    }
+    
+    /**
+     * Returns Describes the country relationship (domestic and/or international) among the shipments being picked up.
+     *
+     * @return \FedEx\PickupService\SimpleType\CountryRelationshipType|string
+     */
+    public function getCountryRelationship()
+    {
+        return $this->CountryRelationship;
     }
     
 

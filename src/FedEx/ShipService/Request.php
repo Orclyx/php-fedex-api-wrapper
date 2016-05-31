@@ -36,7 +36,7 @@ class Request extends AbstractRequest
         if (null != $wsdlPath) {
             $this->_wsdlPath = $wsdlPath;
         } else {
-            $this->_wsdlPath = realpath(dirname(__FILE__) . '/../_wsdl/ShipService_v12.wsdl');
+            $this->_wsdlPath = realpath(dirname(__FILE__) . '/../_wsdl/ShipService_v17.wsdl');
         }
 
         $this->_soapClient = new \SoapClient($this->_wsdlPath, array('trace' => true));
@@ -53,16 +53,6 @@ class Request extends AbstractRequest
     }
 
     /**
-     * Sends the CreatePendingShipmentRequest and returns the response
-     *
-     * @param ComplexType\CreatePendingShipmentRequest $createPendingShipmentRequest 
-     * @return stdClass
-     */
-    public function getCreatePendingShipmentReply(ComplexType\CreatePendingShipmentRequest $createPendingShipmentRequest)
-    {
-        return $this->_soapClient->createPendingShipment($createPendingShipmentRequest->toArray());
-    }
-       /**
      * Sends the ProcessTagRequest and returns the response
      *
      * @param ComplexType\ProcessTagRequest $processTagRequest 
@@ -81,16 +71,6 @@ class Request extends AbstractRequest
     public function getProcessShipmentReply(ComplexType\ProcessShipmentRequest $processShipmentRequest)
     {
         return $this->_soapClient->processShipment($processShipmentRequest->toArray());
-    }
-       /**
-     * Sends the CancelPendingShipmentRequest and returns the response
-     *
-     * @param ComplexType\CancelPendingShipmentRequest $cancelPendingShipmentRequest 
-     * @return stdClass
-     */
-    public function getCancelPendingShipmentReply(ComplexType\CancelPendingShipmentRequest $cancelPendingShipmentRequest)
-    {
-        return $this->_soapClient->cancelPendingShipment($cancelPendingShipmentRequest->toArray());
     }
        /**
      * Sends the DeleteTagRequest and returns the response

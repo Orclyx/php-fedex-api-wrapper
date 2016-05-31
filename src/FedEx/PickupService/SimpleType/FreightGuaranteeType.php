@@ -4,7 +4,7 @@ namespace FedEx\PickupService\SimpleType;
 use FedEx\AbstractSimpleType;
 
 /**
- * Identifies the type of Delivery Guarantee made.
+ * FreightGuaranteeType
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
@@ -15,4 +15,5 @@ class FreightGuaranteeType
 {
     const _GUARANTEED_DATE = 'GUARANTEED_DATE';
     const _GUARANTEED_MORNING = 'GUARANTEED_MORNING';
+    const _GUARANTEED_TIME = 'GUARANTEED_TIME';
 }

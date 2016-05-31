@@ -22,15 +22,25 @@ class FlatbedTrailerDetail
     protected $_name = 'FlatbedTrailerDetail';
 
     /**
-     * Specifies the optional features/characteristics requested for a Freight shipment utilizing a flatbed trailer.
+     * Set Options
      *
      * @param FlatbedTrailerOption[] $options
-     * return FlatbedTrailerDetail
+     * @return FlatbedTrailerDetail
      */
     public function setOptions(array $options)
     {
         $this->Options = $options;
         return $this;
+    }
+    
+    /**
+     * Returns Set Options
+     *
+     * @return FlatbedTrailerOption[]
+     */
+    public function getOptions()
+    {
+        return $this->Options;
     }
     
 

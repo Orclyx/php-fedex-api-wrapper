@@ -14,6 +14,7 @@ class CloseDocumentType
     extends AbstractSimpleType
 {
     const _COD_REPORT = 'COD_REPORT';
+    const _DETAILED_DELIVERY_MANIFEST = 'DETAILED_DELIVERY_MANIFEST';
     const _MANIFEST = 'MANIFEST';
     const _MULTIWEIGHT_REPORT = 'MULTIWEIGHT_REPORT';
     const _OP_950 = 'OP_950';

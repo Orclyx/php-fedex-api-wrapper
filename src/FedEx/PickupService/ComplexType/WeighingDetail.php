@@ -25,12 +25,22 @@ class WeighingDetail
      * Type of scale used
      *
      * @param \FedEx\PickupService\SimpleType\WeighingScaleType|string $type
-     * return WeighingDetail
+     * @return WeighingDetail
      */
     public function setType($type)
     {
         $this->Type = $type;
         return $this;
+    }
+    
+    /**
+     * Returns Type of scale used
+     *
+     * @return \FedEx\PickupService\SimpleType\WeighingScaleType|string
+     */
+    public function getType()
+    {
+        return $this->Type;
     }
     
 

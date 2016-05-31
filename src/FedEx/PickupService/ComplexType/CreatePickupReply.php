@@ -4,7 +4,7 @@ namespace FedEx\PickupService\ComplexType;
 use FedEx\AbstractComplexType;
 
 /**
- * The descriptive data returned to a client in response to a shipment pickup request.
+ * CreatePickupReply
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
@@ -22,10 +22,10 @@ class CreatePickupReply
     protected $_name = 'CreatePickupReply';
 
     /**
-     * Identifies the highest severity encountered when executing the request; in order from high to low: FAILURE, ERROR, WARNING, NOTE, SUCCESS.
+     * Set HighestSeverity
      *
      * @param \FedEx\PickupService\SimpleType\NotificationSeverityType|string $highestSeverity
-     * return CreatePickupReply
+     * @return CreatePickupReply
      */
     public function setHighestSeverity($highestSeverity)
     {
@@ -34,10 +34,20 @@ class CreatePickupReply
     }
     
     /**
-     * The descriptive data detailing the status of a sumbitted transaction.
+     * Returns Set HighestSeverity
+     *
+     * @return \FedEx\PickupService\SimpleType\NotificationSeverityType|string
+     */
+    public function getHighestSeverity()
+    {
+        return $this->HighestSeverity;
+    }
+    
+    /**
+     * Set Notifications
      *
      * @param Notification[] $notifications
-     * return CreatePickupReply
+     * @return CreatePickupReply
      */
     public function setNotifications(array $notifications)
     {
@@ -46,10 +56,20 @@ class CreatePickupReply
     }
     
     /**
-     * Descriptive data that governs data payload language/translations. The TransactionDetail from the request is echoed back to the caller in the corresponding reply.
+     * Returns Set Notifications
+     *
+     * @return Notification[]
+     */
+    public function getNotifications()
+    {
+        return $this->Notifications;
+    }
+    
+    /**
+     * Set TransactionDetail
      *
      * @param TransactionDetail $transactionDetail
-     * return CreatePickupReply
+     * @return CreatePickupReply
      */
     public function setTransactionDetail(TransactionDetail $transactionDetail)
     {
@@ -58,10 +78,20 @@ class CreatePickupReply
     }
     
     /**
-     * Identifies the version/level of a service operation expected by a caller (in each request) and performed by the callee (in each reply).
+     * Returns Set TransactionDetail
+     *
+     * @return TransactionDetail
+     */
+    public function getTransactionDetail()
+    {
+        return $this->TransactionDetail;
+    }
+    
+    /**
+     * Set Version
      *
      * @param VersionId $version
-     * return CreatePickupReply
+     * @return CreatePickupReply
      */
     public function setVersion(VersionId $version)
     {
@@ -70,10 +100,20 @@ class CreatePickupReply
     }
     
     /**
-     * Identifies the confirmation number assigned by FedEx for the request.
+     * Returns Set Version
+     *
+     * @return VersionId
+     */
+    public function getVersion()
+    {
+        return $this->Version;
+    }
+    
+    /**
+     * Set PickupConfirmationNumber
      *
      * @param string $pickupConfirmationNumber
-     * return CreatePickupReply
+     * @return CreatePickupReply
      */
     public function setPickupConfirmationNumber($pickupConfirmationNumber)
     {
@@ -82,10 +122,20 @@ class CreatePickupReply
     }
     
     /**
-     * Identifies the FedEx Location identifier responsible for processing the pickup of the package.
+     * Returns Set PickupConfirmationNumber
+     *
+     * @return string
+     */
+    public function getPickupConfirmationNumber()
+    {
+        return $this->PickupConfirmationNumber;
+    }
+    
+    /**
+     * Set Location
      *
      * @param string $location
-     * return CreatePickupReply
+     * @return CreatePickupReply
      */
     public function setLocation($location)
     {
@@ -94,10 +144,20 @@ class CreatePickupReply
     }
     
     /**
+     * Returns Set Location
+     *
+     * @return string
+     */
+    public function getLocation()
+    {
+        return $this->Location;
+    }
+    
+    /**
      * Coded value supplied by dispatch system.
      *
      * @param string $messageCode
-     * return CreatePickupReply
+     * @return CreatePickupReply
      */
     public function setMessageCode($messageCode)
     {
@@ -106,10 +166,20 @@ class CreatePickupReply
     }
     
     /**
+     * Returns Coded value supplied by dispatch system.
+     *
+     * @return string
+     */
+    public function getMessageCode()
+    {
+        return $this->MessageCode;
+    }
+    
+    /**
      * Message supplied by dispatch system.
      *
      * @param string $message
-     * return CreatePickupReply
+     * @return CreatePickupReply
      */
     public function setMessage($message)
     {
@@ -118,10 +188,20 @@ class CreatePickupReply
     }
     
     /**
+     * Returns Message supplied by dispatch system.
+     *
+     * @return string
+     */
+    public function getMessage()
+    {
+        return $this->Message;
+    }
+    
+    /**
      * Package Return Program control number
      *
      * @param string $pRPControlNumber
-     * return CreatePickupReply
+     * @return CreatePickupReply
      */
     public function setPRPControlNumber($pRPControlNumber)
     {
@@ -130,10 +210,20 @@ class CreatePickupReply
     }
     
     /**
+     * Returns Package Return Program control number
+     *
+     * @return string
+     */
+    public function getPRPControlNumber()
+    {
+        return $this->PRPControlNumber;
+    }
+    
+    /**
      * Used with "stay late" requests; postal-code specific.
      *
      * @param time $lastAccessTime
-     * return CreatePickupReply
+     * @return CreatePickupReply
      */
     public function setLastAccessTime(time $lastAccessTime)
     {
@@ -142,15 +232,35 @@ class CreatePickupReply
     }
     
     /**
-     * Data resulting from the processing of an LTL Freight pickup request.
+     * Returns Used with "stay late" requests; postal-code specific.
+     *
+     * @return time
+     */
+    public function getLastAccessTime()
+    {
+        return $this->LastAccessTime;
+    }
+    
+    /**
+     * Set CompletedFreightPickupDetail
      *
      * @param CompletedFreightPickupDetail $completedFreightPickupDetail
-     * return CreatePickupReply
+     * @return CreatePickupReply
      */
     public function setCompletedFreightPickupDetail(CompletedFreightPickupDetail $completedFreightPickupDetail)
     {
         $this->CompletedFreightPickupDetail = $completedFreightPickupDetail;
         return $this;
+    }
+    
+    /**
+     * Returns Set CompletedFreightPickupDetail
+     *
+     * @return CompletedFreightPickupDetail
+     */
+    public function getCompletedFreightPickupDetail()
+    {
+        return $this->CompletedFreightPickupDetail;
     }
     
 

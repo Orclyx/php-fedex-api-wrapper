@@ -4,7 +4,7 @@ namespace FedEx\UploadDocumentService\SimpleType;
 use FedEx\AbstractSimpleType;
 
 /**
- * UploadDocumentIdProducer
+ * Specifies the application that is responsible for managing the document id.
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper

@@ -22,10 +22,10 @@ class CodAddTransportationChargesDetail
     protected $_name = 'CodAddTransportationChargesDetail';
 
     /**
-     * Set RateTypeBasis
+     * Select the type of rate from which the element is to be selected.
      *
      * @param \FedEx\PickupService\SimpleType\RateTypeBasisType|string $rateTypeBasis
-     * return CodAddTransportationChargesDetail
+     * @return CodAddTransportationChargesDetail
      */
     public function setRateTypeBasis($rateTypeBasis)
     {
@@ -34,10 +34,20 @@ class CodAddTransportationChargesDetail
     }
     
     /**
+     * Returns Select the type of rate from which the element is to be selected.
+     *
+     * @return \FedEx\PickupService\SimpleType\RateTypeBasisType|string
+     */
+    public function getRateTypeBasis()
+    {
+        return $this->RateTypeBasis;
+    }
+    
+    /**
      * Set ChargeBasis
      *
      * @param \FedEx\PickupService\SimpleType\CodAddTransportationChargeBasisType|string $chargeBasis
-     * return CodAddTransportationChargesDetail
+     * @return CodAddTransportationChargesDetail
      */
     public function setChargeBasis($chargeBasis)
     {
@@ -46,15 +56,57 @@ class CodAddTransportationChargesDetail
     }
     
     /**
+     * Returns Set ChargeBasis
+     *
+     * @return \FedEx\PickupService\SimpleType\CodAddTransportationChargeBasisType|string
+     */
+    public function getChargeBasis()
+    {
+        return $this->ChargeBasis;
+    }
+    
+    /**
      * Set ChargeBasisLevel
      *
      * @param \FedEx\PickupService\SimpleType\ChargeBasisLevelType|string $chargeBasisLevel
-     * return CodAddTransportationChargesDetail
+     * @return CodAddTransportationChargesDetail
      */
     public function setChargeBasisLevel($chargeBasisLevel)
     {
         $this->ChargeBasisLevel = $chargeBasisLevel;
         return $this;
+    }
+    
+    /**
+     * Returns Set ChargeBasisLevel
+     *
+     * @return \FedEx\PickupService\SimpleType\ChargeBasisLevelType|string
+     */
+    public function getChargeBasisLevel()
+    {
+        return $this->ChargeBasisLevel;
+    }
+    
+    /**
+     * Select the type of rate used to calculate the percentage value of variable handling.
+     *
+     * @param \FedEx\PickupService\SimpleType\RateLevelBasisType|string $rateLevelBasis
+     * @return CodAddTransportationChargesDetail
+     */
+    public function setRateLevelBasis($rateLevelBasis)
+    {
+        $this->RateLevelBasis = $rateLevelBasis;
+        return $this;
+    }
+    
+    /**
+     * Returns Select the type of rate used to calculate the percentage value of variable handling.
+     *
+     * @return \FedEx\PickupService\SimpleType\RateLevelBasisType|string
+     */
+    public function getRateLevelBasis()
+    {
+        return $this->RateLevelBasis;
     }
     
 

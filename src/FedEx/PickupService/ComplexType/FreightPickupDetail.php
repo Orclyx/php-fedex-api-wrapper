@@ -4,7 +4,7 @@ namespace FedEx\PickupService\ComplexType;
 use FedEx\AbstractComplexType;
 
 /**
- * Descriptive data regarding a FedEx freight service pickup request.
+ * FreightPickupDetail
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
@@ -25,7 +25,7 @@ class FreightPickupDetail
      * Contact Information of origin service center representative that authorized the pickup
      *
      * @param Contact $approvedBy
-     * return FreightPickupDetail
+     * @return FreightPickupDetail
      */
     public function setApprovedBy(Contact $approvedBy)
     {
@@ -34,10 +34,20 @@ class FreightPickupDetail
     }
     
     /**
-     * Identifies the type of payment to be tendered for the pickup.
+     * Returns Contact Information of origin service center representative that authorized the pickup
      *
-     * @param \FedEx\PickupService\SimpleType\FreightAccountPaymentType|string $payment
-     * return FreightPickupDetail
+     * @return Contact
+     */
+    public function getApprovedBy()
+    {
+        return $this->ApprovedBy;
+    }
+    
+    /**
+     * Set Payment
+     *
+     * @param \FedEx\PickupService\SimpleType\PaymentType|string $payment
+     * @return FreightPickupDetail
      */
     public function setPayment($payment)
     {
@@ -46,10 +56,20 @@ class FreightPickupDetail
     }
     
     /**
-     * Indicates the role of the party submitting the transaction.
+     * Returns Set Payment
+     *
+     * @return \FedEx\PickupService\SimpleType\PaymentType|string
+     */
+    public function getPayment()
+    {
+        return $this->Payment;
+    }
+    
+    /**
+     * Set Role
      *
      * @param \FedEx\PickupService\SimpleType\FreightShipmentRoleType|string $role
-     * return FreightPickupDetail
+     * @return FreightPickupDetail
      */
     public function setRole($role)
     {
@@ -58,10 +78,42 @@ class FreightPickupDetail
     }
     
     /**
-     * Contact Information of the person submitting the pickup.
+     * Returns Set Role
+     *
+     * @return \FedEx\PickupService\SimpleType\FreightShipmentRoleType|string
+     */
+    public function getRole()
+    {
+        return $this->Role;
+    }
+    
+    /**
+     * Used in connection with "Send Bill To" (SBT) identification of customer's account used for billing.
+     *
+     * @param Party $alternateBilling
+     * @return FreightPickupDetail
+     */
+    public function setAlternateBilling(Party $alternateBilling)
+    {
+        $this->AlternateBilling = $alternateBilling;
+        return $this;
+    }
+    
+    /**
+     * Returns Used in connection with "Send Bill To" (SBT) identification of customer's account used for billing.
+     *
+     * @return Party
+     */
+    public function getAlternateBilling()
+    {
+        return $this->AlternateBilling;
+    }
+    
+    /**
+     * Set SubmittedBy
      *
      * @param Contact $submittedBy
-     * return FreightPickupDetail
+     * @return FreightPickupDetail
      */
     public function setSubmittedBy(Contact $submittedBy)
     {
@@ -70,15 +122,35 @@ class FreightPickupDetail
     }
     
     /**
-     * Identifies the details about the contents of the shipments to be picked up.
+     * Returns Set SubmittedBy
+     *
+     * @return Contact
+     */
+    public function getSubmittedBy()
+    {
+        return $this->SubmittedBy;
+    }
+    
+    /**
+     * Set LineItems
      *
      * @param FreightPickupLineItem[] $lineItems
-     * return FreightPickupDetail
+     * @return FreightPickupDetail
      */
     public function setLineItems(array $lineItems)
     {
         $this->LineItems = $lineItems;
         return $this;
+    }
+    
+    /**
+     * Returns Set LineItems
+     *
+     * @return FreightPickupLineItem[]
+     */
+    public function getLineItems()
+    {
+        return $this->LineItems;
     }
     
 

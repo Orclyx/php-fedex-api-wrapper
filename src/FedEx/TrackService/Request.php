@@ -36,7 +36,7 @@ class Request extends AbstractRequest
         if (null != $wsdlPath) {
             $this->_wsdlPath = $wsdlPath;
         } else {
-            $this->_wsdlPath = realpath(dirname(__FILE__) . '/../_wsdl/TrackService_v5.wsdl');
+            $this->_wsdlPath = realpath(dirname(__FILE__) . '/../_wsdl/TrackService_v10.wsdl');
         }
 
         $this->_soapClient = new \SoapClient($this->_wsdlPath, array('trace' => true));
@@ -53,16 +53,6 @@ class Request extends AbstractRequest
     }
 
     /**
-     * Sends the TrackNotificationRequest and returns the response
-     *
-     * @param ComplexType\TrackNotificationRequest $trackNotificationRequest 
-     * @return stdClass
-     */
-    public function getGetTrackNotificationReply(ComplexType\TrackNotificationRequest $trackNotificationRequest)
-    {
-        return $this->_soapClient->getTrackNotification($trackNotificationRequest->toArray());
-    }
-       /**
      * Sends the SignatureProofOfDeliveryLetterRequest and returns the response
      *
      * @param ComplexType\SignatureProofOfDeliveryLetterRequest $signatureProofOfDeliveryLetterRequest 
@@ -91,6 +81,16 @@ class Request extends AbstractRequest
     public function getSendSignatureProofOfDeliveryFaxReply(ComplexType\SignatureProofOfDeliveryFaxRequest $signatureProofOfDeliveryFaxRequest)
     {
         return $this->_soapClient->sendSignatureProofOfDeliveryFax($signatureProofOfDeliveryFaxRequest->toArray());
+    }
+       /**
+     * Sends the SendNotificationsRequest and returns the response
+     *
+     * @param ComplexType\SendNotificationsRequest $sendNotificationsRequest 
+     * @return stdClass
+     */
+    public function getSendNotificationsReply(ComplexType\SendNotificationsRequest $sendNotificationsRequest)
+    {
+        return $this->_soapClient->sendNotifications($sendNotificationsRequest->toArray());
     }
    
 

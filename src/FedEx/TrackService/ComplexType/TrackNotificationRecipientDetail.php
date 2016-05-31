@@ -8,7 +8,7 @@ use FedEx\AbstractComplexType;
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
- * @subpackage  Package Movement Information Service
+ * @subpackage  Rate Service
  */
 class TrackNotificationRecipientDetail
     extends AbstractComplexType
@@ -25,12 +25,22 @@ class TrackNotificationRecipientDetail
      * The types of email notifications available for this recipient.
      *
      * @param EMailNotificationEventType[] $notificationEventsAvailable
-     * return TrackNotificationRecipientDetail
+     * @return TrackNotificationRecipientDetail
      */
     public function setNotificationEventsAvailable(array $notificationEventsAvailable)
     {
         $this->NotificationEventsAvailable = $notificationEventsAvailable;
         return $this;
+    }
+    
+    /**
+     * Returns The types of email notifications available for this recipient.
+     *
+     * @return EMailNotificationEventType[]
+     */
+    public function getNotificationEventsAvailable()
+    {
+        return $this->NotificationEventsAvailable;
     }
     
 

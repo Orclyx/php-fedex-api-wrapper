@@ -22,10 +22,10 @@ class DateRange
     protected $_name = 'DateRange';
 
     /**
-     * The beginning date in a date range.
+     * Set Begins
      *
      * @param date $begins
-     * return DateRange
+     * @return DateRange
      */
     public function setBegins($begins)
     {
@@ -34,15 +34,35 @@ class DateRange
     }
     
     /**
-     * The end date in a date range.
+     * Returns Set Begins
+     *
+     * @return date
+     */
+    public function getBegins()
+    {
+        return $this->Begins;
+    }
+    
+    /**
+     * Set Ends
      *
      * @param date $ends
-     * return DateRange
+     * @return DateRange
      */
     public function setEnds($ends)
     {
         $this->Ends = $ends;
         return $this;
+    }
+    
+    /**
+     * Returns Set Ends
+     *
+     * @return date
+     */
+    public function getEnds()
+    {
+        return $this->Ends;
     }
     
 

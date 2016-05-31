@@ -25,7 +25,7 @@ class ValidatedHazardousCommodityContent
      * Identifies and describes an individual hazardous commodity.
      *
      * @param ValidatedHazardousCommodityDescription $description
-     * return ValidatedHazardousCommodityContent
+     * @return ValidatedHazardousCommodityContent
      */
     public function setDescription(ValidatedHazardousCommodityDescription $description)
     {
@@ -34,10 +34,20 @@ class ValidatedHazardousCommodityContent
     }
     
     /**
+     * Returns Identifies and describes an individual hazardous commodity.
+     *
+     * @return ValidatedHazardousCommodityDescription
+     */
+    public function getDescription()
+    {
+        return $this->Description;
+    }
+    
+    /**
      * Specifies the amount of the commodity in alternate units.
      *
      * @param HazardousCommodityQuantityDetail $quantity
-     * return ValidatedHazardousCommodityContent
+     * @return ValidatedHazardousCommodityContent
      */
     public function setQuantity(HazardousCommodityQuantityDetail $quantity)
     {
@@ -46,15 +56,79 @@ class ValidatedHazardousCommodityContent
     }
     
     /**
+     * Returns Specifies the amount of the commodity in alternate units.
+     *
+     * @return HazardousCommodityQuantityDetail
+     */
+    public function getQuantity()
+    {
+        return $this->Quantity;
+    }
+    
+    /**
+     * The mass points are a calculation used by ADR regulations for measuring the risk of a particular hazardous commodity.
+     *
+     * @param decimal $massPoints
+     * @return ValidatedHazardousCommodityContent
+     */
+    public function setMassPoints($massPoints)
+    {
+        $this->MassPoints = $massPoints;
+        return $this;
+    }
+    
+    /**
+     * Returns The mass points are a calculation used by ADR regulations for measuring the risk of a particular hazardous commodity.
+     *
+     * @return decimal
+     */
+    public function getMassPoints()
+    {
+        return $this->MassPoints;
+    }
+    
+    /**
      * Customer-provided specifications for handling individual commodities.
      *
      * @param HazardousCommodityOptionDetail $options
-     * return ValidatedHazardousCommodityContent
+     * @return ValidatedHazardousCommodityContent
      */
     public function setOptions(HazardousCommodityOptionDetail $options)
     {
         $this->Options = $options;
         return $this;
+    }
+    
+    /**
+     * Returns Customer-provided specifications for handling individual commodities.
+     *
+     * @return HazardousCommodityOptionDetail
+     */
+    public function getOptions()
+    {
+        return $this->Options;
+    }
+    
+    /**
+     * The total mass of the contained explosive substances, without the mass of any casings, bullets, shells, etc.
+     *
+     * @param NetExplosiveDetail $netExplosiveDetail
+     * @return ValidatedHazardousCommodityContent
+     */
+    public function setNetExplosiveDetail(NetExplosiveDetail $netExplosiveDetail)
+    {
+        $this->NetExplosiveDetail = $netExplosiveDetail;
+        return $this;
+    }
+    
+    /**
+     * Returns The total mass of the contained explosive substances, without the mass of any casings, bullets, shells, etc.
+     *
+     * @return NetExplosiveDetail
+     */
+    public function getNetExplosiveDetail()
+    {
+        return $this->NetExplosiveDetail;
     }
     
 

@@ -8,7 +8,7 @@ use FedEx\AbstractComplexType;
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
- * @subpackage  Package Movement Information Service
+ * @subpackage  Rate Service
  */
 class TrackReconciliation
     extends AbstractComplexType
@@ -25,7 +25,7 @@ class TrackReconciliation
      * An identifier for this type of status.
      *
      * @param string $status
-     * return TrackReconciliation
+     * @return TrackReconciliation
      */
     public function setStatus($status)
     {
@@ -34,15 +34,35 @@ class TrackReconciliation
     }
     
     /**
+     * Returns An identifier for this type of status.
+     *
+     * @return string
+     */
+    public function getStatus()
+    {
+        return $this->Status;
+    }
+    
+    /**
      * A human-readable description of this status.
      *
      * @param string $description
-     * return TrackReconciliation
+     * @return TrackReconciliation
      */
     public function setDescription($description)
     {
         $this->Description = $description;
         return $this;
+    }
+    
+    /**
+     * Returns A human-readable description of this status.
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->Description;
     }
     
 

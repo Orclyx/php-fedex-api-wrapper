@@ -4,7 +4,7 @@ namespace FedEx\PickupService\ComplexType;
 use FedEx\AbstractComplexType;
 
 /**
- * Information relating to a return shipment.
+ * ReturnShipmentDetail
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
@@ -22,10 +22,10 @@ class ReturnShipmentDetail
     protected $_name = 'ReturnShipmentDetail';
 
     /**
-     * The type of return shipment that is being requested.
+     * Set ReturnType
      *
      * @param \FedEx\PickupService\SimpleType\ReturnType|string $returnType
-     * return ReturnShipmentDetail
+     * @return ReturnShipmentDetail
      */
     public function setReturnType($returnType)
     {
@@ -34,10 +34,20 @@ class ReturnShipmentDetail
     }
     
     /**
-     * Return Merchant Authorization
+     * Returns Set ReturnType
+     *
+     * @return \FedEx\PickupService\SimpleType\ReturnType|string
+     */
+    public function getReturnType()
+    {
+        return $this->ReturnType;
+    }
+    
+    /**
+     * Set Rma
      *
      * @param Rma $rma
-     * return ReturnShipmentDetail
+     * @return ReturnShipmentDetail
      */
     public function setRma(Rma $rma)
     {
@@ -46,15 +56,57 @@ class ReturnShipmentDetail
     }
     
     /**
-     * Describes specific information about the email label shipment.
+     * Returns Set Rma
+     *
+     * @return Rma
+     */
+    public function getRma()
+    {
+        return $this->Rma;
+    }
+    
+    /**
+     * Set ReturnEMailDetail
      *
      * @param ReturnEMailDetail $returnEMailDetail
-     * return ReturnShipmentDetail
+     * @return ReturnShipmentDetail
      */
     public function setReturnEMailDetail(ReturnEMailDetail $returnEMailDetail)
     {
         $this->ReturnEMailDetail = $returnEMailDetail;
         return $this;
+    }
+    
+    /**
+     * Returns Set ReturnEMailDetail
+     *
+     * @return ReturnEMailDetail
+     */
+    public function getReturnEMailDetail()
+    {
+        return $this->ReturnEMailDetail;
+    }
+    
+    /**
+     * Set ReturnAssociation
+     *
+     * @param ReturnAssociationDetail $returnAssociation
+     * @return ReturnShipmentDetail
+     */
+    public function setReturnAssociation(ReturnAssociationDetail $returnAssociation)
+    {
+        $this->ReturnAssociation = $returnAssociation;
+        return $this;
+    }
+    
+    /**
+     * Returns Set ReturnAssociation
+     *
+     * @return ReturnAssociationDetail
+     */
+    public function getReturnAssociation()
+    {
+        return $this->ReturnAssociation;
     }
     
 

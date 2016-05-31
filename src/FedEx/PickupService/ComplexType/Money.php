@@ -4,7 +4,7 @@ namespace FedEx\PickupService\ComplexType;
 use FedEx\AbstractComplexType;
 
 /**
- * The descriptive data for the medium of exchange for FedEx services.
+ * Money
  *
  * @author      Jeremy Dunn <jeremy@jsdunn.info>
  * @package     PHP FedEx API wrapper
@@ -22,10 +22,10 @@ class Money
     protected $_name = 'Money';
 
     /**
-     * Identifies the currency of the monetary amount.
+     * Set Currency
      *
      * @param string $currency
-     * return Money
+     * @return Money
      */
     public function setCurrency($currency)
     {
@@ -34,15 +34,35 @@ class Money
     }
     
     /**
-     * Identifies the monetary amount.
+     * Returns Set Currency
+     *
+     * @return string
+     */
+    public function getCurrency()
+    {
+        return $this->Currency;
+    }
+    
+    /**
+     * Set Amount
      *
      * @param decimal $amount
-     * return Money
+     * @return Money
      */
     public function setAmount($amount)
     {
         $this->Amount = $amount;
         return $this;
+    }
+    
+    /**
+     * Returns Set Amount
+     *
+     * @return decimal
+     */
+    public function getAmount()
+    {
+        return $this->Amount;
     }
     
 

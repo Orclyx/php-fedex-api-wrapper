@@ -18,6 +18,7 @@ class UploadDocumentProducerType
     const _FEDEX_CLS = 'FEDEX_CLS';
     const _FEDEX_FIDT = 'FEDEX_FIDT';
     const _FEDEX_FXRS = 'FEDEX_FXRS';
+    const _FEDEX_GSMW = 'FEDEX_GSMW';
     const _FEDEX_GTM = 'FEDEX_GTM';
     const _OTHER = 'OTHER';
 }

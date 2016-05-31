@@ -16,6 +16,7 @@ class LabelStockType
     const _PAPER_4X6 = 'PAPER_4X6';
     const _PAPER_4X8 = 'PAPER_4X8';
     const _PAPER_4X9 = 'PAPER_4X9';
+    const _PAPER_6X4 = 'PAPER_6X4';
     const _PAPER_7X4point75 = 'PAPER_7X4.75';
     const _PAPER_8point5X11_BOTTOM_HALF_LABEL = 'PAPER_8.5X11_BOTTOM_HALF_LABEL';
     const _PAPER_8point5X11_TOP_HALF_LABEL = 'PAPER_8.5X11_TOP_HALF_LABEL';

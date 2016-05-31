@@ -25,7 +25,7 @@ class CloseDocumentSpecification
      * Indicates the types of close documents requested by the caller.
      *
      * @param CloseDocumentType[] $closeDocumentTypes
-     * return CloseDocumentSpecification
+     * @return CloseDocumentSpecification
      */
     public function setCloseDocumentTypes(array $closeDocumentTypes)
     {
@@ -34,15 +34,79 @@ class CloseDocumentSpecification
     }
     
     /**
+     * Returns Indicates the types of close documents requested by the caller.
+     *
+     * @return CloseDocumentType[]
+     */
+    public function getCloseDocumentTypes()
+    {
+        return $this->CloseDocumentTypes;
+    }
+    
+    /**
+     * Set DetailedDeliveryManifestDetail
+     *
+     * @param DetailedDeliveryManifestDetail $detailedDeliveryManifestDetail
+     * @return CloseDocumentSpecification
+     */
+    public function setDetailedDeliveryManifestDetail(DetailedDeliveryManifestDetail $detailedDeliveryManifestDetail)
+    {
+        $this->DetailedDeliveryManifestDetail = $detailedDeliveryManifestDetail;
+        return $this;
+    }
+    
+    /**
+     * Returns Set DetailedDeliveryManifestDetail
+     *
+     * @return DetailedDeliveryManifestDetail
+     */
+    public function getDetailedDeliveryManifestDetail()
+    {
+        return $this->DetailedDeliveryManifestDetail;
+    }
+    
+    /**
+     * Set ManifestDetail
+     *
+     * @param ManifestDetail $manifestDetail
+     * @return CloseDocumentSpecification
+     */
+    public function setManifestDetail(ManifestDetail $manifestDetail)
+    {
+        $this->ManifestDetail = $manifestDetail;
+        return $this;
+    }
+    
+    /**
+     * Returns Set ManifestDetail
+     *
+     * @return ManifestDetail
+     */
+    public function getManifestDetail()
+    {
+        return $this->ManifestDetail;
+    }
+    
+    /**
      * Specifies the production of the OP-950 document for hazardous materials.
      *
      * @param Op950Detail $op950Detail
-     * return CloseDocumentSpecification
+     * @return CloseDocumentSpecification
      */
     public function setOp950Detail(Op950Detail $op950Detail)
     {
         $this->Op950Detail = $op950Detail;
         return $this;
+    }
+    
+    /**
+     * Returns Specifies the production of the OP-950 document for hazardous materials.
+     *
+     * @return Op950Detail
+     */
+    public function getOp950Detail()
+    {
+        return $this->Op950Detail;
     }
     
 
